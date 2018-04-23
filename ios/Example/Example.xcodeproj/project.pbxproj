@@ -14,7 +14,9 @@
 		834D2995208E2B24009D2271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834D2993208E2B24009D2271 /* LaunchScreen.storyboard */; };
 		834D29A0208E2B24009D2271 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D299F208E2B24009D2271 /* ExampleTests.swift */; };
 		834D29AB208E2B24009D2271 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D29AA208E2B24009D2271 /* ExampleUITests.swift */; };
-		834D29C3208E2D62009D2271 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 834D29C0208E2D5E009D2271 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		836B07D6208E5A37007C40EF /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83678F70208E512000648EFC /* Common.framework */; };
+		836B07FE208E5C0C007C40EF /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834D29C0208E2D5E009D2271 /* Common.framework */; };
+		836B07FF208E5C0C007C40EF /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 834D29C0208E2D5E009D2271 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		834D29C4208E2D62009D2271 /* Embed Frameworks */ = {
+		836B07F6208E5A5A007C40EF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				834D29C3208E2D62009D2271 /* Common.framework in Embed Frameworks */,
+				836B07FF208E5C0C007C40EF /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +64,12 @@
 		834D29A6208E2B24009D2271 /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		834D29AA208E2B24009D2271 /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		834D29AC208E2B24009D2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		834D29C0208E2D5E009D2271 /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Common.framework; path = build/Common.framework; sourceTree = "<group>"; };
+		834D29C0208E2D5E009D2271 /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Common.framework; path = "/Users/danieleboscolo/Documents/Workspace/Testes/kotlin-native-multiplatform/ios/Example/build/Common.framework"; sourceTree = "<absolute>"; };
+		83678F70208E512000648EFC /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83678F73208E512000648EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836B0801208E5CAF007C40EF /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		836B0805208E5CF1007C40EF /* shared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shared; path = ../../../shared; sourceTree = "<group>"; };
+		836B0807208E5E2F007C40EF /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = build/Common.framework/Headers; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836B07D6208E5A37007C40EF /* Common.framework in Frameworks */,
+				836B07FE208E5C0C007C40EF /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				834D2989208E2B23009D2271 /* Example */,
+				83678F71208E512000648EFC /* Common */,
 				834D299E208E2B24009D2271 /* ExampleTests */,
 				834D29A9208E2B24009D2271 /* ExampleUITests */,
 				834D2988208E2B23009D2271 /* Products */,
 				834D29B9208E2C1E009D2271 /* Frameworks */,
+				836B07B7208E541A007C40EF /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +118,7 @@
 				834D2987208E2B23009D2271 /* Example.app */,
 				834D299B208E2B24009D2271 /* ExampleTests.xctest */,
 				834D29A6208E2B24009D2271 /* ExampleUITests.xctest */,
+				83678F70208E512000648EFC /* Common.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,9 +157,27 @@
 		834D29B9208E2C1E009D2271 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				834D29C0208E2D5E009D2271 /* Common.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83678F71208E512000648EFC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				836B0807208E5E2F007C40EF /* Headers */,
+				836B0805208E5CF1007C40EF /* shared */,
+				836B0801208E5CAF007C40EF /* Common.h */,
+				83678F73208E512000648EFC /* Info.plist */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		836B07B7208E541A007C40EF /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				834D29C0208E2D5E009D2271 /* Common.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,11 +187,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 834D29AF208E2B24009D2271 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				834D29B8208E2B30009D2271 /* Run Script - Compile Kotlin Native to iOS framework */,
 				834D2983208E2B23009D2271 /* Sources */,
 				834D2984208E2B23009D2271 /* Frameworks */,
 				834D2985208E2B23009D2271 /* Resources */,
-				834D29C4208E2D62009D2271 /* Embed Frameworks */,
+				836B07F6208E5A5A007C40EF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +237,21 @@
 			productReference = 834D29A6208E2B24009D2271 /* ExampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		83678F6F208E512000648EFC /* Common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83678F87208E512000648EFC /* Build configuration list for PBXNativeTarget "Common" */;
+			buildPhases = (
+				83678F8D208E513100648EFC /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Common;
+			productName = Common;
+			productReference = 83678F70208E512000648EFC /* Common.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,6 +273,9 @@
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = 834D2986208E2B23009D2271;
 					};
+					83678F6F208E512000648EFC = {
+						CreatedOnToolsVersion = 9.3;
+					};
 				};
 			};
 			buildConfigurationList = 834D2982208E2B23009D2271 /* Build configuration list for PBXProject "Example" */;
@@ -247,6 +294,7 @@
 				834D2986208E2B23009D2271 /* Example */,
 				834D299A208E2B24009D2271 /* ExampleTests */,
 				834D29A5208E2B24009D2271 /* ExampleUITests */,
+				83678F6F208E512000648EFC /* Common */,
 			);
 		};
 /* End PBXProject section */
@@ -279,19 +327,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		834D29B8208E2B30009D2271 /* Run Script - Compile Kotlin Native to iOS framework */ = {
+		83678F8D208E513100648EFC /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script - Compile Kotlin Native to iOS framework";
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "case \"$PLATFORM_NAME\" in\niphoneos)\nNAME=ios_arm64\n;;\niphonesimulator)\nNAME=ios_x64\n;;\n*)\necho \"Unknown platform: $PLATFORN_NAME\"\nexit 1\n;;\nesac\n\n\"$SRCROOT/../../gradlew\" -p \"$SRCROOT/../../shared/common-ios\" \"build\"\nrm -rf \"$SRCROOT/build/\"\nmkdir \"$SRCROOT/build/\"\ncp -a \"$SRCROOT/../../shared/common-ios/build/konan/bin/$NAME/\" \"$SRCROOT/build/\"\n";
+			shellScript = "\"$SRCROOT/../../gradlew\" -p \"$SRCROOT/../../shared/common-ios\" \"$KONAN_TASK\"          \\\n-Pkonan.configuration.build.dir=\"$SRCROOT/build\" \\\n-Pkonan.debugging.symbols=\"$DEBUGGING_SYMBOLS\"             \\\n-Pkonan.optimizations.enable=\"$KONAN_ENABLE_OPTIMIZATIONS\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -596,6 +644,70 @@
 			};
 			name = Release;
 		};
+		83678F88208E512000648EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BZ2LF24KZ7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Common/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				KONAN_ENABLE_OPTIMIZATIONS = NO;
+				KONAN_TASK = compileKonanCommonIos_x64;
+				"KONAN_TASK[sdk=iphoneos*]" = compileKonanCommonIos_arm64;
+				"KONAN_TASK[sdk=iphonesimulator*]" = compileKonanCommonIos_x64;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.tokenlab.Common;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		83678F89208E512000648EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BZ2LF24KZ7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Common/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				KONAN_ENABLE_OPTIMIZATIONS = YES;
+				KONAN_TASK = compileKonanCommonIos_x64;
+				"KONAN_TASK[sdk=iphoneos*]" = compileKonanCommonIos_arm64;
+				"KONAN_TASK[sdk=iphonesimulator*]" = compileKonanCommonIos_x64;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.tokenlab.Common;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -631,6 +743,15 @@
 			buildConfigurations = (
 				834D29B6208E2B24009D2271 /* Debug */,
 				834D29B7208E2B24009D2271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83678F87208E512000648EFC /* Build configuration list for PBXNativeTarget "Common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83678F88208E512000648EFC /* Debug */,
+				83678F89208E512000648EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
