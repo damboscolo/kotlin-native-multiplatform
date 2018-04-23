@@ -1,0 +1,8 @@
+apply plugin: 'kotlin-platform-common'
+
+group = 'com.example'
+version = 1.0
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
+}

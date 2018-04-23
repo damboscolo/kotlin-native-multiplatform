@@ -1,0 +1,15 @@
+apply plugin: 'konan'
+
+// Specify targets to build the framework: iOS and iOS simulator
+konan.targets = ['iphone', 'iphone_sim']
+
+konanArtifacts {
+    framework('Common') {
+        enableDebug true
+        enableMultiplatform true
+    }
+}
+
+dependencies {
+    expectedBy project(':shared:common')
+}
