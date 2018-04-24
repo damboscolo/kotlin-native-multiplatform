@@ -1,0 +1,9 @@
+include ':app'
+
+include ':shared'
+include ':shared:common'
+include ':shared:common-android'
+
+project(':shared').projectDir = file('../../shared')
+project(':shared:common').projectDir = file('../../shared/common')
+project(':shared:common-android').projectDir = file('../../shared/common-android')

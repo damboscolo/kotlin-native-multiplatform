@@ -4,7 +4,7 @@ This is an example of [multiplatform Kotlin/Native project](https://github.com/J
 
 The project contains the common module named `common` and have support for iOS by `common-ios` and Android platforms.
 
-# How to create a Kotlin Native Multiplatform project
+# How to create a Kotlin/Native Multiplatform project
 
 ## Gradle Installation
 
@@ -26,7 +26,7 @@ Inside the `common` folder:
 * Create another `build.gradle`
 * A tree of folders like `src/main/kotlin/com/example`
 
-After all, do the same to create the iOS framework, you could named as `common-ios`
+After all, do the same to create the iOS and the Android framework, you could named as `common-ios` and `common-android`
 
 The result should be as following:
 ```bash
@@ -37,6 +37,13 @@ The result should be as following:
 ├── settings.gradle
 └── shared
     ├── common
+    │   ├── build.gradle
+    │   └── src
+    │       └── main
+    │           └── kotlin
+    │               └── com
+    │                   └── example
+    ├── common-android
     │   ├── build.gradle
     │   └── src
     │       └── main
@@ -58,6 +65,7 @@ Add the following code to `settings.gradle` file
 ```bash
 include ':shared:common'
 include ':shared:common-ios'
+include ':shared:common-android'
 ```
 
 To configure your project `build.gradle`
@@ -201,6 +209,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print(CommonMain().sayHello())
     }
+}
+```
+
+## Android Application
+
+```bash
+apply plugin: 'kotlin-platform-jvm'
+
+group = 'com.example'
+version = 1.0
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    expectedBy project(':shared:common')
 }
 ```
 

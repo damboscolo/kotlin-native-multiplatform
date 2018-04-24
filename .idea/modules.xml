@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Testes-kotlin-native-multiplatform.iml" filepath="$PROJECT_DIR$/.idea/modules/Testes-kotlin-native-multiplatform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/common/common.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/common/common.iml" group="shared/common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/common-android/common-android.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/common-android/common-android.iml" group="shared/common-android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/common-android/common-android_main.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/common-android/common-android_main.iml" group="shared/common-android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/common-android/common-android_test.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/common-android/common-android_test.iml" group="shared/common-android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/common-ios/common-ios.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/common-ios/common-ios.iml" group="shared/common-ios" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/common/common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/common/common_main.iml" group="shared/common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/common/common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/common/common_test.iml" group="shared/common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/framework.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/framework.iml" group="framework" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/common/framework-common.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/common/framework-common.iml" group="framework/common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/common-ios/framework-common-ios.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/common-ios/framework-common-ios.iml" group="framework/common-ios" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/common/framework-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/common/framework-common_main.iml" group="framework/common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/common/framework-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/common/framework-common_test.iml" group="framework/common" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-native-multiplatform.iml" filepath="$PROJECT_DIR$/kotlin-native-multiplatform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/shared.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/shared.iml" group="shared" />
     </modules>
   </component>
 </project>
